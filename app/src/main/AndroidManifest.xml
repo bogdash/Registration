@@ -13,7 +13,19 @@
         android:theme="@style/Theme.Registration"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".WelcomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InputAgeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InputNameActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InputLastnameActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegistrationActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
