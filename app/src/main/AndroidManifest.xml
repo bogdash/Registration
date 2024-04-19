@@ -17,16 +17,18 @@
             android:exported="false" />
         <activity
             android:name=".InputAgeActivity"
+            android:taskAffinity="com.bogdash.registration.REGISTRATION_TASK"
             android:exported="false" />
         <activity
             android:name=".InputNameActivity"
+            android:taskAffinity="com.bogdash.registration.REGISTRATION_TASK"
             android:exported="false" />
         <activity
             android:name=".InputLastnameActivity"
+            android:taskAffinity="com.bogdash.registration.REGISTRATION_TASK"
             android:exported="false" />
         <activity
             android:name=".RegistrationActivity"
-            android:taskAffinity="com.bogdash.registration.REGISTRATION_TASK"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

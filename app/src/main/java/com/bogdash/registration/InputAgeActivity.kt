@@ -49,6 +49,7 @@ class InputAgeActivity : AppCompatActivity() {
         val intent = Intent(this, WelcomeActivity::class.java)
         intent.putExtra(IntentKeys.NAME, name)
         intent.putExtra(IntentKeys.LASTNAME, lastname)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
         startActivity(intent)
     }
 
