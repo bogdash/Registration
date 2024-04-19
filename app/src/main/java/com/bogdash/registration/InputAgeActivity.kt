@@ -1,5 +1,6 @@
 package com.bogdash.registration
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
@@ -11,6 +12,8 @@ import com.bogdash.registration.databinding.ActivityInputAgeBinding
 
 class InputAgeActivity : AppCompatActivity() {
     private lateinit var age: String
+    private var name: String? = null
+    private var lastname: String? = null
 
     private lateinit var binding: ActivityInputAgeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,13 +51,14 @@ class InputAgeActivity : AppCompatActivity() {
     }
 
     private fun initIntent() {
-        val name = intent.getStringExtra(Keys.NAME)
-        val lastname = intent.getStringExtra(Keys.LASTNAME)
+        name = intent.getStringExtra(Keys.NAME)
+        lastname = intent.getStringExtra(Keys.LASTNAME)
 
         val intent = Intent(this, WelcomeActivity::class.java)
         intent.putExtra(Keys.NAME, name)
         intent.putExtra(Keys.LASTNAME, lastname)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+        markUserAsRegistered()
         startActivity(intent)
     }
 
@@ -62,5 +66,14 @@ class InputAgeActivity : AppCompatActivity() {
         val intent = Intent(this, RegistrationActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
         startActivity(intent)
+    }
+
+    private fun markUserAsRegistered() {
+        val sharedPreferences = this.getSharedPreferences(Keys.USER_PREFS, Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putBoolean(Keys.IS_REGISTERED, true)
+        editor.putString(Keys.NAME, name)
+        editor.putString(Keys.LASTNAME, lastname)
+        editor.apply()
     }
 }
