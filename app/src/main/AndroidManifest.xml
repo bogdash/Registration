@@ -26,6 +26,7 @@
             android:exported="false" />
         <activity
             android:name=".RegistrationActivity"
+            android:taskAffinity="com.bogdash.registration.REGISTRATION_TASK"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

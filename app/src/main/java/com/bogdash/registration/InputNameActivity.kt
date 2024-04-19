@@ -32,6 +32,10 @@ class InputNameActivity : AppCompatActivity() {
         binding.buttonInputNameBack.setOnClickListener {
             finish()
         }
+
+        binding.buttonInputNameClose.setOnClickListener {
+            navigateToRegistrationActivity()
+        }
     }
 
     private fun getName() {
@@ -41,6 +45,12 @@ class InputNameActivity : AppCompatActivity() {
     private fun initIntent() {
         val intent = Intent(this, InputLastnameActivity::class.java)
         intent.putExtra(IntentKeys.NAME, name)
+        startActivity(intent)
+    }
+
+    private fun navigateToRegistrationActivity() {
+        val intent = Intent(this, RegistrationActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
         startActivity(intent)
     }
 }
