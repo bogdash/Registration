@@ -11,4 +11,8 @@
     <string name="name">Имя</string>
     <string name="input_name">Введите имя</string>
 
+    <!-- Input Lastname Activity -->
+    <string name="lastname">Фамилия</string>
+    <string name="input_lastname">Введите фамилию</string>
+
 </resources>
