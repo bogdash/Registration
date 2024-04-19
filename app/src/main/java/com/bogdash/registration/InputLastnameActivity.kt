@@ -49,11 +49,11 @@ class InputLastnameActivity : AppCompatActivity() {
     }
 
     private fun initIntent() {
-        val name = intent.getStringExtra(IntentKeys.NAME)
+        val name = intent.getStringExtra(Keys.NAME)
         val intent = Intent(this, InputAgeActivity::class.java)
 
-        intent.putExtra(IntentKeys.NAME, name)
-        intent.putExtra(IntentKeys.LASTNAME, lastname)
+        intent.putExtra(Keys.NAME, name)
+        intent.putExtra(Keys.LASTNAME, lastname)
         startActivity(intent)
     }
 

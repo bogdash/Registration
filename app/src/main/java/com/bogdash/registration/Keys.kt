@@ -1,6 +1,6 @@
 package com.bogdash.registration
 
-object IntentKeys {
+object Keys {
     const val NAME = "name"
     const val LASTNAME = "lastname"
 }

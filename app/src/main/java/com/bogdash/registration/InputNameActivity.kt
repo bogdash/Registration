@@ -49,7 +49,7 @@ class InputNameActivity : AppCompatActivity() {
 
     private fun initIntent() {
         val intent = Intent(this, InputLastnameActivity::class.java)
-        intent.putExtra(IntentKeys.NAME, name)
+        intent.putExtra(Keys.NAME, name)
         startActivity(intent)
     }
 

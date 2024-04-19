@@ -48,12 +48,12 @@ class InputAgeActivity : AppCompatActivity() {
     }
 
     private fun initIntent() {
-        val name = intent.getStringExtra(IntentKeys.NAME)
-        val lastname = intent.getStringExtra(IntentKeys.LASTNAME)
+        val name = intent.getStringExtra(Keys.NAME)
+        val lastname = intent.getStringExtra(Keys.LASTNAME)
 
         val intent = Intent(this, WelcomeActivity::class.java)
-        intent.putExtra(IntentKeys.NAME, name)
-        intent.putExtra(IntentKeys.LASTNAME, lastname)
+        intent.putExtra(Keys.NAME, name)
+        intent.putExtra(Keys.LASTNAME, lastname)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
         startActivity(intent)
     }

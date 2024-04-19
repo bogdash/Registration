@@ -28,8 +28,8 @@ class WelcomeActivity : AppCompatActivity() {
     }
 
     private fun setUpTextView() {
-        val name = intent.getStringExtra(IntentKeys.NAME) ?: "no name"
-        val lastname = intent.getStringExtra(IntentKeys.LASTNAME) ?: "no lastname"
+        val name = intent.getStringExtra(Keys.NAME) ?: "no name"
+        val lastname = intent.getStringExtra(Keys.LASTNAME) ?: "no lastname"
         binding.textViewWelcome.text = "Добро пожаловать, $name $lastname"
     }
 }
