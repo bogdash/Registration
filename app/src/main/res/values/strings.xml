@@ -18,4 +18,6 @@
     <!-- Input Age Activity -->
     <string name="age">Возраст</string>
     <string name="input_age">Введите возраст</string>
+
+    <string name="welcome">Добро пожаловать</string>
 </resources>
