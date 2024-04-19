@@ -22,5 +22,14 @@ class WelcomeActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        setUpTextView()
+
+    }
+
+    private fun setUpTextView() {
+        val name = intent.getStringExtra(IntentKeys.NAME) ?: "no name"
+        val lastname = intent.getStringExtra(IntentKeys.LASTNAME) ?: "no lastname"
+        binding.textViewWelcome.text = "Добро пожаловать, $name $lastname"
     }
 }

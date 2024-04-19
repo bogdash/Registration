@@ -35,7 +35,12 @@ class InputAgeActivity : AppCompatActivity() {
     }
 
     private fun initIntent() {
+        val name = intent.getStringExtra(IntentKeys.NAME)
+        val lastname = intent.getStringExtra(IntentKeys.LASTNAME)
+
         val intent = Intent(this, WelcomeActivity::class.java)
+        intent.putExtra(IntentKeys.NAME, name)
+        intent.putExtra(IntentKeys.LASTNAME, lastname)
         startActivity(intent)
     }
 }
