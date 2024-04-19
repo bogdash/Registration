@@ -28,6 +28,10 @@ class InputNameActivity : AppCompatActivity() {
             getName()
             initIntent()
         }
+
+        binding.buttonInputNameBack.setOnClickListener {
+            finish()
+        }
     }
 
     private fun getName() {

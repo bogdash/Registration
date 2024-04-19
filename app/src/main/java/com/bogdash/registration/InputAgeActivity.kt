@@ -28,6 +28,10 @@ class InputAgeActivity : AppCompatActivity() {
             getAge()
             initIntent()
         }
+
+        binding.buttonInputAgeBack.setOnClickListener {
+            finish()
+        }
     }
 
     private fun getAge() {

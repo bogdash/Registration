@@ -29,6 +29,10 @@ class InputLastnameActivity : AppCompatActivity() {
             getLastname()
             initIntent()
         }
+
+        binding.buttonInputLastnameBack.setOnClickListener {
+            finish()
+        }
     }
 
     private fun getLastname() {
