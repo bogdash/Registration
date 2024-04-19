@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">Registration</string>
+    <string name="next">Далее</string>
+    <string name="back">Назад</string>
+    <string name="close">Закрыть</string>
+
+    <!-- Registration Activity -->
+    <string name="start_registration">Начать регистрацию</string>
+
+    <!-- Input Name Activity -->
+    <string name="name">Имя</string>
+    <string name="input_name">Введите имя</string>
+
+    <!-- Input Lastname Activity -->
+    <string name="lastname">Фамилия</string>
+    <string name="input_lastname">Введите фамилию</string>
+
+    <!-- Input Age Activity -->
+    <string name="age">Возраст</string>
+    <string name="input_age">Введите возраст</string>
+
+    <string name="welcome">Добро пожаловать</string>
 </resources>
