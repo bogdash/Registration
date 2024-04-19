@@ -1,5 +1,6 @@
 package com.bogdash.registration
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +9,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.bogdash.registration.databinding.ActivityInputAgeBinding
 
 class InputAgeActivity : AppCompatActivity() {
+    private lateinit var age: String
 
     private lateinit var binding: ActivityInputAgeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,5 +23,19 @@ class InputAgeActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        binding.buttonInputAgeNext.setOnClickListener {
+            getAge()
+            initIntent()
+        }
+    }
+
+    private fun getAge() {
+        age = binding.editTextInputAge.text.toString()
+    }
+
+    private fun initIntent() {
+        val intent = Intent(this, WelcomeActivity::class.java)
+        startActivity(intent)
     }
 }

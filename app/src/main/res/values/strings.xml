@@ -15,4 +15,7 @@
     <string name="lastname">Фамилия</string>
     <string name="input_lastname">Введите фамилию</string>
 
+    <!-- Input Age Activity -->
+    <string name="age">Возраст</string>
+    <string name="input_age">Введите возраст</string>
 </resources>
