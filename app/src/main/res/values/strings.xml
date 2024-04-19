@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Registration</string>
+
+    <!-- Registration Activity -->
+    <string name="start_registration">Начать регистрацию</string>
 </resources>
